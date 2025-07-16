@@ -1,0 +1,70 @@
+# -----------------------
+# Python
+# -----------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environments
+.env/
+.venv/
+venv/
+ENV/
+env/
+
+# Pip dependency logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Byte-compiled / optimized / DLL files
+*.dll
+*.exe
+*.bak
+*.log
+
+# Compiled C extensions
+*.c
+*.cpp
+*.o
+
+# Ignore .env config (OpenAI keys, etc.)
+.env
+.env.*
+
+# Streamlit cache
+.streamlit/
+
+# FAISS vector store or saved indexes
+*.faiss
+*.pkl
+*.index
+
+# -----------------------
+# PyCharm IDE
+# -----------------------
+.idea/
+*.iml
+
+# -----------------------
+# macOS / Windows system files
+# -----------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------
+# Test Coverage / Reports
+# -----------------------
+.coverage
+*.cover
+htmlcov/
+.tox/
+.cache/
+coverage.xml
+nosetests.xml
+*.mo
+*.pot
