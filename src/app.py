@@ -47,3 +47,7 @@ if pdf_docs:
     # Chunking
     text_chunks = get_text_chunks(raw_text)
     st.success("✅ Text split into chunks.")
+
+    # Embedding & Vector store
+    vectorstore = get_vectorstore(text_chunks)
+    st.success("✅ Vector store created.")
