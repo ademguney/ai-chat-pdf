@@ -24,3 +24,22 @@ if not openai_api_key:
 st.set_page_config(page_title="Open Source Chat", page_icon=":books:", layout="wide")
 st.title("PDF Chatbot")
 st.write("Please upload your PDF files.")
+
+
+
+
+
+# ---------- Step 3: Upload PDF files ----------
+with st.sidebar:
+    st.header("📁 Upload PDFs")
+    pdf_docs = st.file_uploader("Choose PDF files", type=["pdf"], accept_multiple_files=True)
+
+
+
+
+
+# ---------- Step 4: Text Extraction & Chunking ----------
+if pdf_docs:
+    raw_text = get_pdf_text(pdf_docs)
+    st.success("✅ Text extracted from PDFs.")
+    st.write(raw_text[:1000])
