@@ -51,3 +51,19 @@ if pdf_docs:
     # Embedding & Vector store
     vectorstore = get_vectorstore(text_chunks)
     st.success("✅ Vector store created.")
+
+    # ---------- Step 5: Ask a Question ----------
+    st.subheader("❓ Ask a question")
+    user_question = st.text_input("Enter your question")
+
+    if user_question:
+        chain = get_conversational_chain(vectorstore= vectorstore)
+        result = chain({"query": user_question})
+        answer = result.get("result")
+
+        st.subheader("📢 Answer:")
+        st.write(answer)
+
+        with st.expander(" Source Documents"):
+            for doc in result["source_documents"]:
+                st.markdown(doc.page_content)
