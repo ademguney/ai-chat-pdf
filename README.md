@@ -1,3 +1,8 @@
+## 🧠 Architecture
+
+![PDF Chatbot Architecture](assets/architecture.png)
+
+
 # 📚 PDF Chatbot
 
 An interactive PDF-based chatbot built with **Streamlit**, **LangChain**, and **OpenAI**.  
