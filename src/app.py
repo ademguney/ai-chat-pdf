@@ -28,6 +28,12 @@ st.write("Please upload your PDF files.")
 
 
 
+# ---------- Step 6: Initialize Chat History ----------
+if "chat_history" not in st.session_state:
+    st.session_state["chat_history"] = []
+
+
+
 
 # ---------- Step 3: Upload PDF files ----------
 with st.sidebar:
@@ -67,3 +73,15 @@ if pdf_docs:
         with st.expander(" Source Documents"):
             for doc in result["source_documents"]:
                 st.markdown(doc.page_content)
+
+
+        # Step 6: Add to chat history
+        st.session_state.chat_history.append((user_question, answer))
+
+    # Step 6: Show chat history
+    if st.session_state.chat_history:
+        st.subheader("💬 Chat History:")
+        for i, (question, answer) in enumerate(st.session_state.chat_history, 1):
+            st.markdown(f"**Q{i}:** {question}")
+            st.markdown(f"**A{i}:** {answer}")
+
