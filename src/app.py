@@ -43,3 +43,7 @@ if pdf_docs:
     raw_text = get_pdf_text(pdf_docs)
     st.success("✅ Text extracted from PDFs.")
     st.write(raw_text[:1000])
+
+    # Chunking
+    text_chunks = get_text_chunks(raw_text)
+    st.success("✅ Text split into chunks.")
