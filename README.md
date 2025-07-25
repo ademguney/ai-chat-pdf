@@ -10,6 +10,16 @@ Users can upload one or more PDF files and ask natural language questions. The b
 
 ---
 
+## 🎥 YouTube Tutorial Series
+
+Watch the step-by-step YouTube playlist to learn how this project was built:
+
+[![Watch on YouTube](https://img.youtube.com/vi/OHxIF8F81Mw/0.jpg)](https://www.youtube.com/watch?v=OHxIF8F81Mw&list=PL79K02UCsAZA_t0rZPOf1qKF67koj0Ir9)
+
+📺 [Open the Full Playlist on YouTube](https://www.youtube.com/watch?v=OHxIF8F81Mw&list=PL79K02UCsAZA_t0rZPOf1qKF67koj0Ir9&ab_channel=AdemG%C3%BCney)
+
+---
+
 ## 🚀 Features
 
 - 📄 Upload multiple PDF files
@@ -40,3 +50,4 @@ cd ai-chat-pdf
 python -m venv .venv
 source .venv/bin/activate  # or `.venv\Scripts\activate` on Windows
 pip install -r requirements.txt
+```
